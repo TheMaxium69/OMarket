@@ -39,11 +39,11 @@
 <!--  REPONSE POSSIBLE  -->
         <?php if ($env_question[$nbQuestion]["type"] == "selector") { ?>
 
-            <div>
+            <div class="question-radio">
 
                 <?php foreach ($env_question[$nbQuestion][$ENV_LANG]["select"] as $selectOne) { ?>
-                        <input id="box" type="checkbox"/>
-                        <label for="box">Checkbox 1</label><br>
+                        <input id="box" type="radio" name="q<?= $nbQuestion ?>"/>
+                        <label for="box"><?= $selectOne ?></label><br>
                 <?php } ?>
 
             </div>
@@ -108,17 +108,17 @@
     }
 
     #formBody input.champ{
-            width: 80%;
-            border: none;
-            border-bottom: 2px solid #000000;
-            padding-left: 13px;
-            padding-bottom: 15px;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: border 0s;
-            background: transparent;
-            color: #000000;
+        width: 80%;
+        border: none;
+        border-bottom: 2px solid #000000;
+        padding-left: 13px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: border 0s;
+        background: transparent;
+        color: #000000;
         margin-top: 70px;
         margin-right: 0px;
         margin-bottom: 70px;
@@ -130,6 +130,12 @@
         border-bottom: 4px solid #000000;
     }
 
+    #formBody .question-radio{
+
+        padding: 40px;
+        font-size: 40px;
+
+    }
 
 
 
