@@ -5,7 +5,9 @@ function head($page)
 
     //Page
     if ($page == 1) {
-        $title = "Exemple";
+        $title = "OMarket";
+    } else if ($page == 2) {
+        $title = "Contact | OMarket";
     } else {
         $title = "404 | Exemple";
     }

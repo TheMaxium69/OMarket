@@ -1,12 +1,11 @@
-<?php include "app/app.php"; $page = 1; head($page); ?>
+<?php include "app/app.php"; $page = 2; head($page); ?>
 <body> <header> <?php navbar($page); ?> </header>
 
-<main id="page-home">
+<main id="page-contact">
 
     <p>Exemple </p>
 
 </main>
 
-<?php  footer(); ?>
 
 </body> </html>
