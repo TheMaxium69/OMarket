@@ -6,31 +6,32 @@
 <main id="form">
 
 
-    <?php
-
-        if (empty($_GET['q'])){
-
-    ?>
+    <?php if (empty($_GET['q'])){ ?>
 
         <h1>1) <?= $env_question[1][$ENV_LANG]["question"] ?> </h1>
         <small><?= $env_question[1][$ENV_LANG]["sub_question"] ?></small>
 
+    <?php } else {
 
-
-
-    <?php
-
-        } else {
-
-            if
-
-
-
-
-
-        }
+        $nbQuestion = $_GET['q'];
 
     ?>
+
+
+<!--    QUESTION        -->
+        <h1><?= $nbQuestion ?>) <?= $env_question[$nbQuestion][$ENV_LANG]["question"] ?> </h1>
+
+<!--    SUB QUESTION    -->
+        <?php if (!empty($env_question[$nbQuestion][$ENV_LANG]["sub_question"])){ ?>
+            <small><?= $env_question[$nbQuestion][$ENV_LANG]["sub_question"] ?></small>
+        <?php } ?>
+
+
+
+
+
+
+    <?php } ?>
 
 
 
