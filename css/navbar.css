@@ -1,11 +1,19 @@
 header[role="banner"] {
+    
     #logo-main {
-      display: block;
-      margin: 20px auto;
+      margin: 20px;
       width: 200px;
-      height: auto;
     }
+
   }
+
+  #banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
   
   #navbar-primary.navbar-default {
     background: transparent;
