@@ -8,8 +8,10 @@ function head($page)
         $title = "OMarket";
     } else if ($page == 2) {
         $title = "Contact | OMarket";
+    } else if ($page == 3) {
+        $title = "Question ? | OMarket";
     } else {
-        $title = "404 | Exemple";
+        $title = "404 | OMarket";
     }
 
 

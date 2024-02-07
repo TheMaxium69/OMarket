@@ -1,15 +1,19 @@
 <?php include "app/app.php"; $page = 3; head($page); ?>
 <body id="formBody">
 
-<!--<header> --><?php //navbar($page); ?><!-- </header>-->
+<header>
+
+    <?php /*navbar($page); */?>
+    <img src="assets/DA/logoOMARKET.png">
+
+</header>
 
 <main id="form">
-
 
     <?php if (empty($_GET['q'])){ ?>
 
         <h1>1) <?= $env_question[1][$ENV_LANG]["question"] ?> </h1>
-        <small><?= $env_question[1][$ENV_LANG]["sub_question"] ?></small>
+        <h6><?= $env_question[1][$ENV_LANG]["sub_question"] ?></h6>
 
     <?php } else {
 
@@ -23,8 +27,30 @@
 
 <!--    SUB QUESTION    -->
         <?php if (!empty($env_question[$nbQuestion][$ENV_LANG]["sub_question"])){ ?>
-            <small><?= $env_question[$nbQuestion][$ENV_LANG]["sub_question"] ?></small>
+            <h6><?= $env_question[$nbQuestion][$ENV_LANG]["sub_question"] ?></h6>
         <?php } ?>
+
+<!--  REPONSE POSSIBLE  -->
+        <?php if ($env_question[$nbQuestion]["type"] == "selector") { ?>
+
+
+
+
+
+
+
+        <?php } else if ($env_question[$nbQuestion]["type"] == "champ") { ?>
+
+
+
+
+
+        <?php } ?>
+
+
+
+
+
 
 
 
@@ -45,9 +71,14 @@
         height: 100%;
     }
 
+    #formBody header img{
+        width: 235px;
+        margin: 20px;
+    }
+
     #form{
-        padding-left: 16%;
-        padding-top: 20%;
+        padding-left: 18%;
+        padding-top: 14%;
     }
 
     /*Question*/
