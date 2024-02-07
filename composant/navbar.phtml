@@ -7,16 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/OMarket-WebSite/" class="<?php echo ($page == "home" ? "active" : "")?>">Home</a>
+          <a class="nav-link <?php if ($page == 1){ echo "active";}?>" href="">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/OMarket-WebSite/article.php" class="<?php echo ($page == "articles" ? "active" : "")?>">Articles</a>
+          <a class="nav-link <?php if ($page == 2){ echo "active";}?>" href="article.php">Articles</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/OMarket-WebSite/about.php" class="<?php echo ($page == "about" ? "active" : "")?>">About</a>
+          <a class="nav-link <?php if ($page == 4){ echo "active";}?>" href="about.php">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/OMarket-WebSite/form.php" class="<?php echo ($page == "form" ? "active" : "")?>">Form</a>
+          <a class="nav-link <?php if ($page == 3){ echo "active";}?>" href="form.php">Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if ($page == 5){ echo "active";}?>" href="contact.php">Contact</a>
         </li>
       </ul>
     </div>

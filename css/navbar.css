@@ -1,4 +1,4 @@
-#navbarNav a {
+.navbar a {
     font-weight: 700;
     color: black;
 }
@@ -10,4 +10,5 @@
 
 .active{
     color:red;
+    font-weight: bold;
 }
