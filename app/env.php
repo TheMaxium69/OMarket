@@ -62,8 +62,8 @@ $env_question = [
     // troisieme question
     3 => [
         "fr" => [
-            "question" => "",
-            "champ" => "",
+            "question" => "Quel âge avez-vous ?",
+            "champ" => "Entrez votre âge",
             "reponse" => "",
         ],
 
