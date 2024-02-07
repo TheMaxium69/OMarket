@@ -1,0 +1,13 @@
+#navbarNav a {
+    font-weight: 700;
+    color: black;
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.active{
+    color:red;
+}
