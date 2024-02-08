@@ -45,8 +45,18 @@ $env_question = [
     // Deuxieme question
     2 => [
         "fr" => [
-            "question" => "",
-            "select" => [],
+            "question" => "Quel est votre régime alimentaire préféré ?",
+            "select" => [
+                "Omnivore",
+                "Végétarien",
+                "Végétalien ",
+                "Pesco-végétarien",
+                "Protéiné ",
+                "Sans gluten",
+                "Sans produits laitiers",
+                "Sans sucre ajouté",
+                "Flexitarien"
+            ],
             "reponse" => "",
         ],
 

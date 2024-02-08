@@ -26,7 +26,7 @@ if (!empty($_GET['q'])){
 }
 
 $_POST['hereQuestion'] = $nbQuestion;
-var_dump($_POST);
+//var_dump($_POST);
 
 ?>
 
@@ -78,7 +78,7 @@ var_dump($_POST);
 
         <?php } ?>
 
-<!--  BUTTOM VALIDATIOn  -->
+<!--  BUTTOM VALIDATION  -->
 
 
     <div class="footer-form row">
@@ -119,8 +119,13 @@ var_dump($_POST);
     }
 
     #form{
-        padding-left: 18%;
-        padding-top: 14%;
+        /*padding-left: 18%;*/
+        /*padding-top: 14%;*/
+        width: 60%;
+        /*margin-top: calc(20% - 110px);*/
+        margin-right: 20%;
+        /*margin-bottom: calc(20% - 110px);*/
+        margin-left: 20%;
     }
 
     /*Question*/
@@ -179,7 +184,7 @@ var_dump($_POST);
         border-bottom: 4px solid black;
         padding-bottom: 18px;
         padding-top: 30px;
-        width: 80%;
+        /*width: 80%;*/
     }
 
     #formBody .form-check-input {
