@@ -12,7 +12,7 @@ a.nav-link:hover{
 ul > .nav-item:hover {
     color:white;
     font-weight: bold;
-    background-color: darkred;
+    background-color: red;
     border-radius: 25px;
     opacity: 0.4;
 }
@@ -20,7 +20,7 @@ ul > .nav-item:hover {
 #active {
     color:white;
     font-weight: bold;
-    background-color: darkred;
+    background-color: red;
     border-radius: 25px;
     opacity: 0.4;
 }
