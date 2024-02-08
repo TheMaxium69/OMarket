@@ -14,7 +14,7 @@ ul > .nav-item:hover {
     font-weight: bold;
     background-color: darkred;
     border-radius: 25px;
-    opacity: 0.9;
+    opacity: 0.4;
 }
 
 #active {
@@ -22,7 +22,7 @@ ul > .nav-item:hover {
     font-weight: bold;
     background-color: darkred;
     border-radius: 25px;
-    opacity: 0.9;
+    opacity: 0.4;
 }
 
 .div #navbar{
