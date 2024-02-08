@@ -1,8 +1,8 @@
-#aboutomarket {
+/* #aboutomarket {
     
-}
+} */
 
 #aboutomarket img {
-    width: 269px;
-    height: 200px;
+    width: 100%;
+    height: auto;
 }
