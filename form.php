@@ -10,17 +10,15 @@
 
 <main id="form">
 
-    <?php if (empty($_GET['q'])){ ?>
+    <?php if (empty($_GET['q'])){
 
-        <div class="row">
-            <prefix><?= "1" ?><i class="fa-solid fa-arrow-right"></i></prefix>
-            <h1><?= $env_question[1][$ENV_LANG]["question"] ?> </h1>
-        </div>
-        <h6><?= $env_question[1][$ENV_LANG]["sub_question"] ?></h6>
+        $nbQuestion = "1";
 
-    <?php } else {
+    } else {
 
         $nbQuestion = $_GET['q'];
+
+    }
 
     ?>
 
@@ -56,8 +54,7 @@
 
         <?php } else if ($env_question[$nbQuestion]["type"] == "champ") { ?>
 
-            <div>
-
+            <div class="question-champ">
 
                 <input class="champ" type="text" placeholder="<?= $env_question[$nbQuestion][$ENV_LANG]["champ"] ?>">
 
@@ -65,8 +62,19 @@
 
         <?php } ?>
 
+<!--  BUTTOM VALIDATIOn  -->
 
-    <?php } ?>
+
+    <div style="background-color: red">
+
+
+
+
+
+    </div>
+
+
+
 
 
 
