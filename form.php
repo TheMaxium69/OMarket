@@ -42,8 +42,13 @@
             <div class="question-radio">
 
                 <?php foreach ($env_question[$nbQuestion][$ENV_LANG]["select"] as $selectOne) { ?>
-                        <input id="box" type="radio" name="q<?= $nbQuestion ?>"/>
-                        <label for="box"><?= $selectOne ?></label><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q<?= $nbQuestion ?>" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <?= $selectOne ?>
+                        </label>
+                    </div>
+
                 <?php } ?>
 
             </div>
@@ -58,8 +63,6 @@
 
             </div>
 
-
-
         <?php } ?>
 
 
@@ -70,6 +73,11 @@
 </main>
 
 <style>
+
+
+
+
+
 
     #formBody {
         background-color: #f6f2e8;
@@ -131,11 +139,36 @@
     }
 
     #formBody .question-radio{
-
-        padding: 40px;
-        font-size: 40px;
+        padding: 5px 0px;
 
     }
+
+    #formBody .form-check {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        border-bottom: 4px solid black;
+        padding-bottom: 18px;
+        padding-top: 30px;
+        width: 80%;
+    }
+
+    #formBody .form-check-input {
+        width: 30px;
+        height: 30px;
+    }
+
+    #formBody .form-check-label {
+        font-size: 27px;
+        margin-left: 27px;
+    }
+
+    #formBody .form-check-input:checked {
+
+        accent-color: #000000 !important;
+    }
+
+
 
 
 
