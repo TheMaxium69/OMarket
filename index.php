@@ -7,7 +7,7 @@
         <img src="./assets/DA/vitrine-resize.png" class="img-fluid" alt="image vitrine">
     </div>
 
-   <?php howItWorks(); ?> 
+    <?php howItWorks(); ?> 
 
 </main>
 
