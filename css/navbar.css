@@ -14,7 +14,6 @@ nav ul > .nav-item:hover {
     font-weight: bold;
     background-color: red;
     border-radius: 25px;
-    opacity: 0.4;
 }
 
 nav #active {
@@ -22,7 +21,6 @@ nav #active {
     font-weight: bold;
     background-color: red;
     border-radius: 25px;
-    opacity: 0.4;
 }
 
 nav .div #navbar{
