@@ -4,31 +4,38 @@
 <header>
 
     <?php /*navbar($page); */?>
-    <img src="assets/DA/logoOMARKET.png">
+    <img onclick="window.location.href = '.';" src="assets/DA/logoOMARKET.png">
 
 </header>
 
 
 <?php
 
-var_dump($_POST);
-
-if (empty($_GET['q'])){
-
-    $nbQuestion = "1";
-
-} else {
+if (!empty($_GET['q'])){
 
     $nbQuestion = $_GET['q'];
 
-} ?>
+} else if (!empty($_POST['goQuestion'])){
+
+    $nbQuestion = $_POST['goQuestion'];
+
+} else {
+
+    $nbQuestion = "1";
+
+}
+
+$_POST['hereQuestion'] = $nbQuestion;
+var_dump($_POST);
+
+?>
 
 
 <main id="form">
-    <form action="form.php?q=<?= $nbQuestion+1 ?>" method="POST">
+    <form action="form.php" method="POST">
 
 
-
+        <input type="hidden" >
 
 <!--    QUESTION        -->
         <div class="row">
@@ -46,9 +53,11 @@ if (empty($_GET['q'])){
 
             <div class="question-radio">
 
-                <?php foreach ($env_question[$nbQuestion][$ENV_LANG]["select"] as $selectOne) { ?>
+                <?php
+                $index = 0;
+                foreach ($env_question[$nbQuestion][$ENV_LANG]["select"] as $selectOne) { $index = $index+1; ?>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q<?= $nbQuestion ?>" id="flexRadioDefault1" value="<?= $selectOne ?>">
+                        <input class="form-check-input" type="radio" name="q<?= $nbQuestion ?>" id="flexRadioDefault1" value="<?= $index ?>">
                         <label class="form-check-label" for="flexRadioDefault1">
                             <?= $selectOne ?>
                         </label>
@@ -74,20 +83,21 @@ if (empty($_GET['q'])){
 
     <div class="footer-form row">
 
-        <button class="footer-form-left btn btn-danger"> <i class="fa-solid fa-circle-chevron-left"></i> Précendant</button>
-        <h2> <?= $nbQuestion ?> / <?= count($env_question) ?> </h2>
-        <button type="submit" class="footer-form-right btn btn-danger">Suivant <i class="fa-solid fa-circle-chevron-right"></i> </button>
+            <button type="submit" name="goQuestion" value="<?= $nbQuestion - 1 ?>" class="footer-form-left btn btn-danger">
+                <i class="fa-solid fa-circle-chevron-left"></i> Précédent
+            </button>
 
+            <h2><?= $nbQuestion ?> / <?= count($env_question) ?></h2>
 
-
-
+            <button type="submit" name="goQuestion" value="<?= $nbQuestion + 1 ?>" class="footer-form-right btn btn-danger">
+                Suivant <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
 
     </div>
 
+</form>
 
 
-
-    </form>
 </main>
 
 <style>
