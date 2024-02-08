@@ -8,19 +8,26 @@
 
 </header>
 
+
+<?php
+
+var_dump($_POST);
+
+if (empty($_GET['q'])){
+
+    $nbQuestion = "1";
+
+} else {
+
+    $nbQuestion = $_GET['q'];
+
+} ?>
+
+
 <main id="form">
+    <form action="form.php?q=<?= $nbQuestion+1 ?>" method="POST">
 
-    <?php if (empty($_GET['q'])){
 
-        $nbQuestion = "1";
-
-    } else {
-
-        $nbQuestion = $_GET['q'];
-
-    }
-
-    ?>
 
 
 <!--    QUESTION        -->
@@ -41,7 +48,7 @@
 
                 <?php foreach ($env_question[$nbQuestion][$ENV_LANG]["select"] as $selectOne) { ?>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q<?= $nbQuestion ?>" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="q<?= $nbQuestion ?>" id="flexRadioDefault1" value="<?= $selectOne ?>">
                         <label class="form-check-label" for="flexRadioDefault1">
                             <?= $selectOne ?>
                         </label>
@@ -65,7 +72,11 @@
 <!--  BUTTOM VALIDATIOn  -->
 
 
-    <div style="background-color: red">
+    <div class="footer-form row">
+
+        <button class="footer-form-left btn btn-danger"> <i class="fa-solid fa-circle-chevron-left"></i> Précendant</button>
+        <h2> <?= $nbQuestion ?> / <?= count($env_question) ?> </h2>
+        <button type="submit" class="footer-form-right btn btn-danger">Suivant <i class="fa-solid fa-circle-chevron-right"></i> </button>
 
 
 
@@ -76,8 +87,7 @@
 
 
 
-
-
+    </form>
 </main>
 
 <style>
@@ -121,6 +131,7 @@
     #formBody prefix i{
         margin-left: 5px;
         font-size: 15px;
+        color: red;
     }
 
     #formBody input.champ{
@@ -173,9 +184,28 @@
 
     #formBody .form-check-input:checked {
 
-        accent-color: #000000 !important;
+        accent-color: #ff0024 !important;
     }
 
+    #formBody .footer-form{
+        /*background-color: red;*/
+        position: absolute;
+        height: 182px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    #formBody .footer-form button{
+        margin: auto 88px;
+        background-color: red;
+        border-color: red;
+        border-radius: 10px;
+    }
+
+    #formBody .footer-form h2{
+        margin: auto;
+    }
 
 
 
