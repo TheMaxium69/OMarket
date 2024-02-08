@@ -1,23 +1,15 @@
-a.nav-link{
+nav a.nav-link{
     text-decoration: none;
     font-weight: bold;
     color: black;
 }
 
-a.nav-link:hover{
+nav a.nav-link:hover{
     color:white;
     font-weight: bold;
 }
 
-ul > .nav-item:hover {
-    color:white;
-    font-weight: bold;
-    background-color: red;
-    border-radius: 25px;
-    opacity: 0.4;
-}
-
-#active {
+nav ul > .nav-item:hover {
     color:white;
     font-weight: bold;
     background-color: red;
@@ -25,19 +17,27 @@ ul > .nav-item:hover {
     opacity: 0.4;
 }
 
-.div #navbar{
+nav #active {
+    color:white;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 25px;
+    opacity: 0.4;
+}
+
+nav .div #navbar{
     display: flex;
     justify-content: space-between;
 }
 
-.loginAndCart > * {
+nav .loginAndCart > * {
     margin-right: 20px;
 }
 
-i:hover{
+nav i:hover{
     color: red;
 }
 
-.logo-container{
+nav .logo-container{
     padding-right: 100px;
 }

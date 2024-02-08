@@ -6,6 +6,10 @@
     <?php /*navbar($page); */?>
     <img onclick="window.location.href = '.';" src="assets/DA/logoOMARKET.png">
 
+    <div class="closeForm">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
 </header>
 
 
@@ -83,9 +87,19 @@ $_POST['hereQuestion'] = $nbQuestion;
 
     <div class="footer-form row">
 
-            <button type="submit" name="goQuestion" value="<?= $nbQuestion - 1 ?>" class="footer-form-left btn btn-danger">
+
+        <?php if($nbQuestion-1 !== 0){ ?>
+
+            <button type="submit" name="goQuestion" value="<?= $nbQuestion - 1 ?>" class="footer-form-left btn btn-danger ">
                 <i class="fa-solid fa-circle-chevron-left"></i> Précédent
             </button>
+        <?php } else { ?>
+
+            <button class="footer-form-left btn btn-danger desactive">
+                <i class="fa-solid fa-circle-xmark"></i> Précédent
+            </button>
+
+        <?php } ?>
 
             <h2><?= $nbQuestion ?> / <?= count($env_question) ?></h2>
 
@@ -123,6 +137,7 @@ $_POST['hereQuestion'] = $nbQuestion;
         /*padding-top: 14%;*/
         width: 60%;
         /*margin-top: calc(20% - 110px);*/
+        margin-top: calc(100vh - 55%);
         margin-right: 20%;
         /*margin-bottom: calc(20% - 110px);*/
         margin-left: 20%;
@@ -204,7 +219,7 @@ $_POST['hereQuestion'] = $nbQuestion;
 
     #formBody .footer-form{
         /*background-color: red;*/
-        position: absolute;
+        /*position: absolute;*/
         height: 182px;
         width: 100%;
         bottom: 0;
@@ -218,8 +233,22 @@ $_POST['hereQuestion'] = $nbQuestion;
         border-radius: 10px;
     }
 
+    #formBody .footer-form button.desactive{
+        background-color: #ff000026!important;
+        border-color: rgba(255, 0, 0, 0) !important;
+    }
+
     #formBody .footer-form h2{
         margin: auto;
+    }
+
+    #formBody .closeForm{
+
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        font-size: 30px;
+
     }
 
 
