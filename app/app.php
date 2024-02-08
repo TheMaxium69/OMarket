@@ -8,3 +8,4 @@ require_once "head.php";
 require_once "./function/navbar.php";
 require_once "./function/footer.php";
 require_once "./function/aboutomarket.php";
+require_once "./function/how-it-works.php";
