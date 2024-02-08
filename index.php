@@ -9,7 +9,7 @@
 
     <?php howItWorks(); ?>
     <?php aboutomarket(); ?>
-    
+    <?php FAQ(); ?>
 
 </main>
 
