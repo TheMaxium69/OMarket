@@ -13,14 +13,14 @@ nav ul > .nav-item:hover {
     color:white;
     font-weight: bold;
     background-color: red;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 nav #active {
     color:white;
     font-weight: bold;
     background-color: red;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 nav .div #navbar{
