@@ -14,14 +14,27 @@
 
 
 <?php
-
+/*
+ *
+ * REDIRECTION ET CHARGEMENT DE QUESTION
+ *
+ */
 if (!empty($_GET['q'])){
 
     $nbQuestion = $_GET['q'];
 
 } else if (!empty($_POST['goQuestion'])){
 
-    $nbQuestion = $_POST['goQuestion'];
+
+    if ($_POST['goQuestion'] == "FINAL"){
+
+        exit();
+
+    } else {
+
+        $nbQuestion = $_POST['goQuestion'];
+
+    }
 
 } else {
 
@@ -30,7 +43,36 @@ if (!empty($_GET['q'])){
 }
 
 $_POST['hereQuestion'] = $nbQuestion;
-//var_dump($_POST);
+$totalQuestion = count($env_question);
+var_dump($_POST);
+
+
+/*
+ *
+ * ENREGISTREMENT DE DONNER
+ *
+ */
+
+if ($nbQuestion !== "1") {
+
+
+    $oldQuestion = $nbQuestion-1;
+    $questionDonner = $_POST['q'.$oldQuestion];
+
+//    var_dump($questionDonner);
+
+    // Définition des valeurs du cookie
+    $nomCookie = "OMarket_Form";
+    $valeurCookie = $questionDonner;
+    $dureeExpiration = time() + 3600; // Expire dans 1 heure (3600 secondes)
+
+    // Création du cookie
+    setcookie($nomCookie, $valeurCookie, $dureeExpiration, "/");
+
+    // Affichage d'un message pour indiquer que le cookie a été créé
+    echo "Le cookie '$nomCookie' a été créé.";
+
+}
 
 ?>
 
@@ -101,11 +143,20 @@ $_POST['hereQuestion'] = $nbQuestion;
 
         <?php } ?>
 
-            <h2><?= $nbQuestion ?> / <?= count($env_question) ?></h2>
+            <h2><?= $nbQuestion ?> / <?= $totalQuestion ?></h2>
+
+        <?php if($nbQuestion+1 <= $totalQuestion){ ?>
 
             <button type="submit" name="goQuestion" value="<?= $nbQuestion + 1 ?>" class="footer-form-right btn btn-danger">
                 Suivant <i class="fa-solid fa-circle-chevron-right"></i>
             </button>
+        <?php } else { ?>
+
+            <button type="submit" name="goQuestion" value="FINAL" class="footer-form-right btn btn-danger">
+                Finish <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+
+        <?php } ?>
 
     </div>
 
@@ -165,7 +216,7 @@ $_POST['hereQuestion'] = $nbQuestion;
     }
 
     #formBody input.champ{
-        width: 80%;
+        width: 100%;
         border: none;
         border-bottom: 2px solid #000000;
         padding-left: 13px;
