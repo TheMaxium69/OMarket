@@ -1,20 +1,41 @@
 a.nav-link{
     text-decoration: none;
-    font-weight: 100;
-    color: grey;
+    font-weight: bold;
+    color: black;
 }
 
 a.nav-link:hover{
-    color:black;
+    color:white;
     font-weight: bold;
 }
 
-#navbar{
-    display: flex;
-    justify-content: center;
+ul > .nav-item:hover {
+    color:white;
+    font-weight: bold;
+    background-color: darkred;
+    border-radius: 25px;
 }
 
 #active {
-    color:black;
+    color:white;
     font-weight: bold;
+    background-color: darkred;
+    border-radius: 25px;
+}
+
+.div #navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginAndCart > * {
+    margin-right: 20px;
+}
+
+i:hover{
+    color: darkred;
+}
+
+.logo-container{
+    padding-right: 100px;
 }
