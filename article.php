@@ -5,6 +5,8 @@
 
     <p>Article </p>
 
+    <?php articleCard(); ?>
+
     <?php aboutomarket(); ?>
 
     <?php FAQ(); ?>
