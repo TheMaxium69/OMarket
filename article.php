@@ -3,7 +3,7 @@
 
 <main id="article">
 
-    <p>Article </p>
+    <div class="container-fluid p-0 m-0"></div>
 
     <?php articleCard(); ?>
 

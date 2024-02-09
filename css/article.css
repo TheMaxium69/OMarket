@@ -1,0 +1,8 @@
+#article .container-fluid{
+    background-image: url('../assets/DA/vitrine.png');
+    background-position: center 67%;
+    background-size: 100%;
+    width: 100%;
+    height: 231px;
+    background-repeat: no-repeat;
+}
