@@ -54,6 +54,11 @@
         color: #7e7e7e;
     line-height: 28px;
     }
+
+
+    /* Footer Social */
+
+
     .footer-social-icon span {
     color: #fff;
     display: block;
@@ -88,6 +93,11 @@
     line-height: 38px;
     border-radius: 50%;
     }
+
+
+    /* Footer Widget */ 
+
+    
     .footer-widget-heading h3 {
     color: #fff;
     font-size: 20px;
@@ -117,6 +127,11 @@
     color: #878787;
     text-transform: capitalize;
     }
+
+
+    /* Subscribe Form */
+
+
     .subscribe-form {
     position: relative;
     overflow: hidden;
@@ -156,6 +171,11 @@
         font-size: 35px;
         margin-top: -3.5px;
     }
+
+
+    /* Coryright Area */ 
+
+
     .copyright-area{
     background: #202020;
     padding: 25px 0;
