@@ -13,4 +13,5 @@
 
 <?php  footer(); ?>
 
-</body> </html>
+</body>
+</html>
