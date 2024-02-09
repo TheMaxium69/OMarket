@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 //System
 require_once "env.php";
 require_once "head.php";

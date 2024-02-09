@@ -14,11 +14,15 @@
 
 
 <?php
+
 /*
  *
  * REDIRECTION ET CHARGEMENT DE QUESTION
  *
  */
+
+$totalQuestion = count($env_question);
+
 if (!empty($_GET['q'])){
 
     $nbQuestion = $_GET['q'];
@@ -26,9 +30,10 @@ if (!empty($_GET['q'])){
 } else if (!empty($_POST['goQuestion'])){
 
 
-    if ($_POST['goQuestion'] == "FINAL"){
+    if ($_POST['goQuestion'] > $totalQuestion){
 
-        exit();
+        $_SESSION["reponseFormulaire"]['final'] = true;
+        $nbQuestion = $_POST['goQuestion'];
 
     } else {
 
@@ -43,8 +48,7 @@ if (!empty($_GET['q'])){
 }
 
 $_POST['hereQuestion'] = $nbQuestion;
-$totalQuestion = count($env_question);
-var_dump($_POST);
+//var_dump($_POST);
 
 
 /*
@@ -53,37 +57,72 @@ var_dump($_POST);
  *
  */
 
-if ($nbQuestion !== "1") {
+if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
 
-
+    // Recuperation de la response a la question precedente
     $oldQuestion = $nbQuestion-1;
-    $questionDonner = $_POST['q'.$oldQuestion];
+    $reponseDonner = $_POST['q'.$oldQuestion];
 
-//    var_dump($questionDonner);
+    // Recuperation des anciennes reponses
+    $SESSSION_FORM = $_SESSION["reponseFormulaire"];
 
-    // Définition des valeurs du cookie
-    $nomCookie = "OMarket_Form";
-    $valeurCookie = $questionDonner;
-    $dureeExpiration = time() + 3600; // Expire dans 1 heure (3600 secondes)
+    //Création du nouveaux tableau
+    $SESSSION_FORM['q'.$oldQuestion] =  $reponseDonner;
 
-    // Création du cookie
-    setcookie($nomCookie, $valeurCookie, $dureeExpiration, "/");
+    //Set le nouveau tableau dans sesssion
+    $_SESSION["reponseFormulaire"] = $SESSSION_FORM;
 
-    // Affichage d'un message pour indiquer que le cookie a été créé
-    echo "Le cookie '$nomCookie' a été créé.";
+} else if(!empty($_SESSION["reponseFormulaire"]['final'])) {
+
+
+    // Recuperation de la response a la question precedente
+    $oldQuestion = $nbQuestion-1;
+    $reponseDonner = $_POST['q'.$oldQuestion];
+
+    // Recuperation des anciennes reponses
+    $SESSSION_FORM = $_SESSION["reponseFormulaire"];
+
+    //Création du nouveaux tableau
+    $SESSSION_FORM['q'.$oldQuestion] =  $reponseDonner;
+
+    //Set le nouveau tableau dans sesssion
+    $_SESSION["reponseFormulaire"] = $SESSSION_FORM;
+
+
+
+    //FINAL
+    $nbFinalTemp = 0;
+    if (!empty($_SESSION["reponseFormulaireFinal"]['finalCount'])){
+
+        $nbFinalTemp = $_SESSION["reponseFormulaireFinal"]['finalCount'];
+        $_SESSION["reponseFormulaireFinal"] = $_SESSION["reponseFormulaire"];
+        $_SESSION["reponseFormulaireFinal"]['finalCount'] = $nbFinalTemp+1;
+
+    } else {
+
+        $_SESSION["reponseFormulaireFinal"] = $_SESSION["reponseFormulaire"];
+        $_SESSION["reponseFormulaireFinal"]['finalCount'] = 1;
+    }
+    $_SESSION["reponseFormulaire"] = [];
+
+}  else {
+
+    $_SESSION["reponseFormulaire"] = [];
 
 }
 
+//var_dump($_SESSION["reponseFormulaire"]);
+//var_dump($_SESSION["reponseFormulaireFinal"]);
 ?>
 
-
+<?php if (empty($_POST['goQuestion']) || $_POST['goQuestion'] <= $totalQuestion){ ?>
 <main id="form">
     <form action="form.php" method="POST">
 
 
         <input type="hidden" >
 
-<!--    QUESTION        -->
+<!--    QUESTION     -->
         <div class="row">
             <prefix><?= $nbQuestion ?><i class="fa-solid fa-arrow-right"></i></prefix>
             <h1><?= $env_question[$nbQuestion][$ENV_LANG]["question"] ?> </h1>
@@ -118,7 +157,7 @@ if ($nbQuestion !== "1") {
 
             <div class="question-champ">
 
-                <input class="champ" type="text" placeholder="<?= $env_question[$nbQuestion][$ENV_LANG]["champ"] ?>">
+                <input class="champ" type="text" name="q<?= $nbQuestion ?>" placeholder="<?= $env_question[$nbQuestion][$ENV_LANG]["champ"] ?>">
 
             </div>
 
@@ -152,7 +191,7 @@ if ($nbQuestion !== "1") {
             </button>
         <?php } else { ?>
 
-            <button type="submit" name="goQuestion" value="FINAL" class="footer-form-right btn btn-danger">
+            <button type="submit" name="goQuestion" value="<?= $nbQuestion + 1 ?>" class="footer-form-right btn btn-danger">
                 Finish <i class="fa-solid fa-circle-chevron-right"></i>
             </button>
 
@@ -161,7 +200,13 @@ if ($nbQuestion !== "1") {
     </div>
 
 </form>
+<?php } else { ?>
 
+    <div class="row">
+        <h1>Final </h1>
+    </div>
+
+<?php } ?>
 
 </main>
 
@@ -187,8 +232,7 @@ if ($nbQuestion !== "1") {
         /*padding-left: 18%;*/
         /*padding-top: 14%;*/
         width: 60%;
-        /*margin-top: calc(20% - 110px);*/
-        margin-top: calc(100vh - 55%);
+        /*margin-top: calc(20% - 110px);*/margin-top: 16vh; 
         margin-right: 20%;
         /*margin-bottom: calc(20% - 110px);*/
         margin-left: 20%;
