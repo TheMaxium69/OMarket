@@ -6,3 +6,7 @@
 #aboutomarket img{
     border-radius: 35px;
 }
+
+#aboutomarket .highlight {
+    color: #ff0000;
+}
