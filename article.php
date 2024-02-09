@@ -7,6 +7,8 @@
 
     <?php aboutomarket(); ?>
 
+    <?php FAQ(); ?>
+
 </main>
 
 <?php  footer(); ?>

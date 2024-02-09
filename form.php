@@ -6,7 +6,7 @@
     <?php /*navbar($page); */?>
     <img onclick="window.location.href = '.';" src="assets/DA/logoOMARKET.png">
 
-    <div class="closeForm">
+    <div class="closeForm" onclick="window.location.href = '.';">
         <i class="fa-solid fa-xmark"></i>
     </div>
 
@@ -232,7 +232,7 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
         /*padding-left: 18%;*/
         /*padding-top: 14%;*/
         width: 60%;
-        /*margin-top: calc(20% - 110px);*/margin-top: 16vh; 
+        /*margin-top: calc(20% - 110px);*/margin-top: 16vh;
         margin-right: 20%;
         /*margin-bottom: calc(20% - 110px);*/
         margin-left: 20%;
