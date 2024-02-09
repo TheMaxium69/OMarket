@@ -5,6 +5,8 @@
 
     <p>Article </p>
 
+    <?php aboutomarket(); ?>
+
 </main>
 
 <?php  footer(); ?>
