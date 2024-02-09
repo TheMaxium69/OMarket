@@ -1,10 +1,10 @@
 #FAQ{
-    background-color: #f8f3ed;
     padding-top: 4%;
 }
 
 
-#FAQ h2{
+#FAQ h2.title {
     color:#ff0000;
-    font-weight: 400;
+    font-weight: 500;
+    margin-bottom: 43px;
 }

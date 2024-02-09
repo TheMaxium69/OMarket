@@ -1,8 +1,8 @@
-#home > .container-fluid{
+#home .container-fluid{
     background-image: url('../assets/DA/vitrine.png');
-    background-position: center;
+    background-position: center 72%;
     background-size: 100%;
     width: 100%;
-    height: 54vh;
+    height: 392px;
     background-repeat: no-repeat;
 }

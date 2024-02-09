@@ -1,3 +1,7 @@
+nav {
+    background-color: white;
+}
+
 nav a.nav-link{
     text-decoration: none;
     font-weight: bold;

@@ -1,10 +1,16 @@
+#aboutomarket {
+    background-color: white;
+}
+
+
+
 #aboutomarket .container{
     padding-top: 4%;
     padding-bottom: 6%;
 }
 
 #aboutomarket img{
-    border-radius: 35px;
+    border-radius: 15px;
 }
 
 #aboutomarket .highlight {
