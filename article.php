@@ -11,7 +11,7 @@
             <div class="border mb-3">
                 <form action="">
                     <input type="text" placeholder="Rechercher votre produit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
                 </form>
             </div>
         </div>
