@@ -64,4 +64,10 @@
 
 #article .button-container{
     margin-top:3%;
+    position: relative;
+}
+
+#article #button-view{
+    position: absolute;
+    bottom: 20px;
 }

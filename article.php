@@ -23,7 +23,7 @@
     <?php articleCard(); ?>
 <div class="viewmore">
     <div class="row justify-content-center button-container">
-        <div class="colspan-6">
+        <div class="colspan-6" id="button-view">
             <button onclick="window.location.href = '';">View more</button>
         </div>
     </div>
