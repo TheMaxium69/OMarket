@@ -10,7 +10,23 @@ ALL
 
 :root{
 
+    /*Red*/
     --color-main:red;
+
+    /*Blue*/
+    --color-main:#273fd4;
+
+    /*Marron Clair*/
+    --color-main:#9D8980!important;
+
+    /*Gris*/
+    --color-main:#454a5b;
+
+    /*Vert dégeux*/
+    --color-main:#57644a;
+
+    /*Marron défgeux*/
+    --color-main: #645655;
 
 }
 
