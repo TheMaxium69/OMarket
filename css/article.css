@@ -25,8 +25,15 @@
     padding-bottom: 2%;
 }
 
-#article #search-icon{
+#article #searchbar-button{
     position: absolute;
-    right: 47px;
+    right: 30px;
+    top: 18px;
+    border: none;
+    background: none;
+}
+
+#article #search-icon{
     font-size: 170%;
+    font-weight: bolder;
 }

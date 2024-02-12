@@ -34,9 +34,9 @@ nav .loginAndCart > * {
 }
 
 nav i:hover{
-    color: red;
+    color:var(--color-main);
 }
+    padding-ri
 
-nav .logo-container{
-    padding-right: 100px;
+nav .logo-container{ght: 100px;
 }

@@ -16,7 +16,7 @@
 }
 
 #article_card .buttonAdd {
-    background-color: #ff0101;
+    background-color: var(--color-main);
     color: #fefffe;
     text-decoration: solid;
     font-weight: 600;

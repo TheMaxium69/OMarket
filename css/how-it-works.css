@@ -9,7 +9,7 @@
 }
 
 #howitworks .icon-container {
-    color: #ff0000;
+    color: var(--color-main);
     padding-top: 22px;
     padding-left: 23px;
     margin-bottom: 17px;
@@ -64,7 +64,7 @@
 #howitworks button{
     color: white;
     font-weight: 700;
-    background-color: #ff0000;
+    background-color:var(--color-main);
     padding: 6px;
     border:none;
     text-transform: uppercase;
