@@ -8,7 +8,7 @@
 <div class="container searchbar">              
     <div class="row d-flex justify-content-center">
         <div class="col-lg-10">
-            <div class="border mb-3">
+            <div class="mb-3">
                 <form action="">
                     <input type="text" placeholder="Rechercher votre produit">
                     <button type="submit" id="searchbar-button">
