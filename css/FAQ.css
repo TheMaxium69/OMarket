@@ -6,5 +6,8 @@
 #FAQ h2.title {
     color:var(--color-main);
     font-weight: 500;
-    margin-bottom: 43px;
+}
+
+#FAQ {
+    
 }
