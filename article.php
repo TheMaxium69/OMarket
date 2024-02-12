@@ -10,7 +10,7 @@
         <div class="col-lg-10">
             <div class="mb-3">
                 <form action="">
-                    <input type="text" placeholder="Rechercher votre produit">
+                    <input type="text" placeholder="Rechercher votre produit" id="searchbar">
                     <button type="submit" id="searchbar-button">
                         <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
                     </button>
