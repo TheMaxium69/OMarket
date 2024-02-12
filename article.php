@@ -20,7 +20,7 @@
     </div>
 </div>
 
-    <?php articleCard(); ?>x
+    <?php articleCard(); ?>
 <div class="viewmore">
     <div class="row justify-content-center button-container">
         <div class="colspan-6">
