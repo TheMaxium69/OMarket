@@ -20,7 +20,7 @@
     </div>
 </div>
 
-    <?php articleCard(); ?>
+    <?php articleCard(); ?>x
 
     <?php aboutomarket(); ?>
 
