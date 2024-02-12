@@ -8,10 +8,11 @@ ALL
 */
 
 
-/*body,html{*/
-/*    background-color: #f8f3ed;*/
-/*}*/
+:root{
 
+    --color-main:red;
+
+}
 
 textarea:focus,
 input[type="text"]:focus,

@@ -16,7 +16,7 @@ nav .product{
 
 nav .test{
     color: white;
-    background-color: #ff0000;
+    background-color: var(--color-main);
     padding: 6px;
     border:none;
     border-radius: 10px;
