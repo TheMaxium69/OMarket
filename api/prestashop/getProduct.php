@@ -33,16 +33,27 @@ function getProductAll(){
 
     foreach ($resultRecup2 as $productBase){
 
-        $productAll[$productBase['id_product']]['price'] = $productBase['price'];
+        $productAll[$productBase['id_product']]['priceHT'] = $productBase['price'];
+        $productAll[$productBase['id_product']]['taxe'] = $productBase['id_tax_rules_group'];
         $productAll[$productBase['id_product']]['active'] = $productBase['active'];
 
     }
+
+//    RECUPERE LA TABLE PRODUCT BASE
+
+    $requeteRecup3 = $db->prepare("SELECT * FROM `ps_layered_price_index` ");
+    $requeteRecup3->execute();
+    $resultRecup3 = $requeteRecup3->fetchAll();
+
+    foreach ($resultRecup3 as $productPrice){
+
+        $productAll[$productPrice['id_product']]['priceTTC'] = $productPrice['price_max'];
+
+    }
+
 
 //    RETURN
 
     return $productAll;
 
 }
-
-
-var_dump(getProductAll());

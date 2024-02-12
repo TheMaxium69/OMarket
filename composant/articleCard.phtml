@@ -1,14 +1,28 @@
+<?php
+
+require_once "api/prestashop/getProduct.php";
+
+$productAll = getProductAll();
+
+foreach ($productAll as $product){
+
+    if ($product['active'] == 1){
+?>
+
 <div id="article_card">
 
     <div class="card" style="width: 18rem;">
 
-    <img src="assets/DA/aboutpicture.png" class="card-img-top" alt="article_name_picture">
+    <img src="<?= $env_urlPrestashop . $product['id']  ."-home_default/". $product['link'] . ".jpg" ?>" class="card-img-top" alt="article_name_picture">
         <div class="card-body">
 
-            <h5 class="card-title">Article Name</h5>
-            <p class="card-text">10$/Month</p>
-            <a href="#" class="btn btn-primary buttonView">View Detail</a>
+            <h5 class="card-title"><?= $product['name'] ?></h5>
+<!--            <h5 class="card-title">--><?php //echo $product['name']; ?><!--</h5>-->
+            <p class="card-text"><?= number_format($product['priceTTC'], 2) ?>€</p>
+            <a href="<?= $env_urlPrestashop . "home/" . $product['id'] . "-" . $product['link'] . ".html" ?>" class="btn btn-primary buttonView">View Detail</a>
             <a href="#" class="btn btn-primary buttonAdd">Add to Cart</a>
         </div>
     </div>
 </div>
+
+<?php } } ?>
