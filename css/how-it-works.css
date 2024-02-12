@@ -77,6 +77,10 @@
     border-radius: 15px;
 }
 
+#howitworks button:hover {
+    background-color: #808679;
+}
+
 #howitworks .start-card{
     margin-bottom: 60px;
 }

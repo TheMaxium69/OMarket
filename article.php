@@ -21,6 +21,13 @@
 </div>
 
     <?php articleCard(); ?>x
+<div class="viewmore">
+    <div class="row justify-content-center button-container">
+        <div class="colspan-6">
+            <button onclick="window.location.href = '';">View more</button>
+        </div>
+    </div>
+</div>
 
     <?php aboutomarket(); ?>
 
