@@ -8,6 +8,10 @@
     padding-bottom: 5%;
 }
 
+#howitworks h4{
+    font-size: 1.4rem;
+}
+
 #howitworks .icon-container {
     color: var(--color-main);
     padding-top: 22px;

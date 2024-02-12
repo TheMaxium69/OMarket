@@ -7,12 +7,8 @@
     border-radius: 20px;
 }
 
-#article_card .buttonView {
-    background-color: #febcbd;
-    color: black;
-    text-decoration: solid;
-    font-weight: 600;
-    border: none;
+#article_card .buttonAdd:hover {
+    background-color: var(--color-main);
 }
 
 #article_card .buttonAdd {
@@ -21,4 +17,11 @@
     text-decoration: solid;
     font-weight: 600;
     border: none;
+    width: 100%;
+}
+
+#article_card .card{
+    margin-right:30px;
+    margin-left:30px;
+    margin-bottom:70px;
 }
