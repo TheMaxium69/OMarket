@@ -29,5 +29,5 @@
 </main>
 
 <?php  footer(); ?>
-
+<script src="javascript/search.js"></script>
 </body> </html>
