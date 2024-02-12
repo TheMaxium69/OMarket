@@ -7,10 +7,6 @@
     border-radius: 20px;
 }
 
-#article_card .buttonAdd:hover {
-    background-color: var(--color-main);
-}
-
 #article_card .buttonAdd {
     background-color: var(--color-main);
     color: #fefffe;
@@ -18,6 +14,10 @@
     font-weight: 600;
     border: none;
     width: 100%;
+}
+
+#article_card .buttonAdd:hover {
+    background-color: #808679;
 }
 
 #article_card .card{

@@ -17,13 +17,13 @@ ALL
     --color-main:#273fd4;
 
     /*Marron Clair*/
-    --color-main:#9D8980!important;
+    --color-main:#9D8980;
 
     /*Gris*/
     --color-main:#454a5b;
 
     /*Vert dégeux*/
-    --color-main:#57644a;
+    --color-main:#57644a !important;
 
     /*Marron défgeux*/
     --color-main: #645655;
