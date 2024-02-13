@@ -53,7 +53,6 @@ function getProductAll(){
 
 
 //    RETURN
-
     return $productAll;
 
 }

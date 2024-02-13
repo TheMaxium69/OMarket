@@ -1,13 +1,13 @@
-#article_card img {
+.article_card img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-#article_card a {
+.article_card a {
     border-radius: 20px;
 }
 
-#article_card .buttonAdd {
+.article_card .buttonAdd {
     background-color: var(--color-main);
     color: #fefffe;
     text-decoration: solid;
@@ -16,11 +16,11 @@
     width: 100%;
 }
 
-#article_card .buttonAdd:hover {
+.article_card .buttonAdd:hover {
     background-color: #808679;
 }
 
-#article_card .card{
+.article_card .card{
     margin-right:30px;
     margin-left:30px;
     margin-bottom:70px;
