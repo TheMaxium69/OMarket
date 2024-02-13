@@ -9,7 +9,7 @@
     <div class="row d-flex justify-content-center">
         <div class="col-lg-10">
             <div class="mb-3">
-                <form action="">
+                <form action="" onsubmit="return false;">
                     <input type="text" placeholder="Rechercher votre produit" id="searchbar">
                     <button type="submit" id="searchbar-button">
                         <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
