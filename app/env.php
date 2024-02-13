@@ -8,7 +8,7 @@ $ENV_LANG = "fr"; // fr or en
 //Variable Share
 
 $env_urlFile = "./extension/";
-$env_urlLogo = "https://getbootstrap.com/docs/4.6/assets/img/favicons/favicon-32x32.png";
+$env_urlLogo = "assets/DA/onglet.png";
 $env_urlPrestashop = "https://localhost/";
 
 // Formulaire

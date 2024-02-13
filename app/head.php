@@ -7,9 +7,13 @@ function head($page)
     if ($page == 1) {
         $title = "OMarket";
     } else if ($page == 2) {
-        $title = "Contact | OMarket";
+        $title = "Article | OMarket";
     } else if ($page == 3) {
         $title = "Question ? | OMarket";
+    } else if ($page == 5) {
+        $title = "Contact | OMarket";
+    } else if ($page == 7) {
+        $title = "OMarket";
     } else {
         $title = "404 | OMarket";
     }
