@@ -15,19 +15,18 @@
 
 
 
-document.$("#searchbar").on("keyup", function() {
+$("#searchbar").on("keyup", function() {
 
     const search = this.value.toLowerCase();
-    const articleCards = document.$(".article_card");
-    
-    articleCards.forEach(articleCard => {
+
+    $(".article_card").each(function(){
         
-        const title = articleCard.$(".card-title").textContent.toLowerCase();
-        const text = articleCard.$(".card-text").textContent.toLowerCase();
+        const title = $(this).find(".card-title").text().toLowerCase();
+        const text = $(this).find(".card-text").text().toLowerCase();
 
         const condition = title.includes(search) || text.includes(search);
            
-        articleCard.classList.toggle("displaynone", !condition);
-        articleCard.classList.toggle("display", condition);
+        $(this).toggleClass("displayfalse", !condition);
+        $(this).toggleClass("displaytrue", condition);
     });
 });

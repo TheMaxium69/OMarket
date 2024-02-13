@@ -26,10 +26,10 @@
     margin-bottom:70px;
 }
 
-.article_card .displaynone{
+#article .displayfalse{
     display: none;
 }
 
-.article_card .display{
+#article .displaytrue{
     display: block;
 }
