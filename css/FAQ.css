@@ -8,6 +8,6 @@
     font-weight: 500;
 }
 
-#FAQ {
-    
+#FAQ .card-header{
+    padding: .25rem 1.25rem;
 }
