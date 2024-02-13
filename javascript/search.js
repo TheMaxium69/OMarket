@@ -11,9 +11,8 @@
 
 //  enlever display:none dans le cas contraire
 
-// si la variable acceuillant l'input = "" alors
+// si la variable acceuillant l'input = "" alors ?
 
-//viewmore et searchbar incompatible
 
 
 document.$("#searchbar").on("keyup", function() {
@@ -32,36 +31,3 @@ document.$("#searchbar").on("keyup", function() {
         articleCard.classList.toggle("display", condition);
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
