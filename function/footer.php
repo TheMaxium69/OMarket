@@ -1,5 +1,5 @@
 <?php
-function footer()
+function footer($page)
 {
 
     require_once "./composant/footer.phtml";

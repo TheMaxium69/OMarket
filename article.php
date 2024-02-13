@@ -35,6 +35,6 @@
 
 </main>
 
-<?php  footer(); ?>
+<?php  footer($page); ?>
 <script src="javascript/search.js"></script>
 </body> </html>

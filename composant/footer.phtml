@@ -85,7 +85,7 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="api/mail/getMailSubscribe.php" method="POST">
+                                <form action="api/mail/postMailSubscribe.php?page=<?= $page ?>" method="POST">
                                     <input type="text" placeholder="Email Address" name="email">
                                     <input id="validerSubscribe" type="submit" value="Subscribe">
                                     <button style="background-color: var(--color-main);color: white"><i class="fa-solid fa-arrow-right"></i></button>
@@ -113,3 +113,19 @@
             </div>
         </div>
     </footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://unpkg.com/izitoast/dist/js/iziToast.min.js'></script>
+<script  src="javascript/notif.js"></script>
+
+<?php if (!empty($_GET['notif']) && $_GET['notif'] == "true") {?>
+    <script>
+        if(Text != 1){
+            iziToast.success({
+                title: 'OK',
+                position: 'bottomRight',
+                message: 'Votre email a bien été envoyé !'
+            });
+        }
+    </script>
+<?php } ?>

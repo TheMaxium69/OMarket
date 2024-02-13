@@ -11,6 +11,20 @@ $env_urlFile = "./extension/";
 $env_urlLogo = "assets/DA/onglet.png";
 $env_urlPrestashop = "https://localhost/";
 
+// Page
+
+$env_page = [
+
+    "1" => "index.php",
+    "2" => "article.php",
+    "3" => "form.php",
+    "4" => "about.php",
+    "5" => "contact.php",
+    "7" => "term.php",
+
+
+];
+
 // Formulaire
 
 $env_question = [
