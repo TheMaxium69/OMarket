@@ -11,3 +11,21 @@
 #FAQ .card-header{
     padding: .25rem 1.25rem;
 }
+
+@media (max-width: 992px){
+    
+    #FAQ .card i{
+
+        position: relative;
+        top:5px;
+    }
+}
+
+@media (max-width: 391px){
+
+    #FAQ .card i::before{
+
+        position: relative;
+        top: 20xp;
+    }
+}
