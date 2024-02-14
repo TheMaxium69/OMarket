@@ -163,6 +163,10 @@
     text-transform: capitalize;
     }
 
+    .widget {
+        padding-left: 60px;
+    }
+
 
     /* Subscribe Form */
 
@@ -235,3 +239,36 @@
     color: #878787;
     }
 
+    /* Responsive */
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    
+    .footer-social-icon {
+        margin-bottom: 50px;
+
+    }
+    .widget {
+        margin-bottom: 40px;
+        padding-left: 15px !important;
+
+    }
+
+
+
+}
+
+@media (max-width: 602px) {
+    
+}
+
+@media (max-width: 548px) {
+    
+}
+
+@media (max-width: 377px) {
+    
+}

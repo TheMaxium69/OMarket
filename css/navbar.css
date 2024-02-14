@@ -43,10 +43,10 @@ nav .logo-container{
 
 @media (max-width: 1200px){
     
-   nav .logo-container{
-    padding-right: 70px;
-    padding-left: 60px;
-   }
+    nav .logo-container{
+        padding-right: 70px;
+        padding-left: 60px;
+    }
 }
 
 @media (max-width: 992px){
@@ -127,7 +127,7 @@ nav .logo-container{
     
     nav .product, nav .test{
         
-       line-height: 40px;
+        line-height: 40px;
     }
 
     
