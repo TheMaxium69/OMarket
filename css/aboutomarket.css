@@ -16,3 +16,11 @@
 #aboutomarket .highlight {
     color: var(--color-main);
 }
+
+@media (max-width: 990px) {
+    
+    #aboutomarket .img-container img {
+        margin-bottom: 50px;
+    }
+    
+}
