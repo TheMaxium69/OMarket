@@ -241,10 +241,6 @@
 
     /* Responsive */
 
-@media (max-width: 1200px) {
-    
-}
-
 @media (max-width: 992px) {
     
     .footer-social-icon {
@@ -256,19 +252,18 @@
         padding-left: 15px !important;
 
     }
-
-
-
 }
 
-@media (max-width: 602px) {
-    
-}
+@media (max-width: 767px) {
+    .cta-text1 {
+        padding-left: 45px;
+        display: block;
+    }
+    .contact-footer {
+        margin-bottom: 20px;
+    }
 
-@media (max-width: 548px) {
-    
-}
-
-@media (max-width: 377px) {
-    
+    .contact-footer:first-child {
+        margin-top: 20px;
+    }
 }
