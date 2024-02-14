@@ -40,3 +40,109 @@ nav i:hover{
 nav .logo-container{
     padding-right: 170px;
 }
+
+@media (max-width: 1200px){
+    
+   nav .logo-container{
+    padding-right: 70px;
+    padding-left: 60px;
+   }
+}
+
+@media (max-width: 992px){
+
+    body{
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255,244,236,1) 6%, rgba(255,244,236,1) 100%);
+    }
+
+    #home > .illustration{
+        position: relative;
+        top: 25px;
+    }
+
+    nav #navbar{
+        display: flex;
+        flex-direction: column;
+        position:relative;
+    }
+    
+    nav #navbarNav{
+        order:3;
+        position: absolute;
+        top: 125px;
+        z-index: 1;
+    }
+
+    nav .logo-container{
+        order: 1;
+    }
+
+    nav .loginAndCart{
+        order: 2;
+    }
+
+    nav .navbar-nav{
+        flex-direction: row;
+    }
+
+
+    nav .loginAndCart{
+        position:absolute;
+        top: 20px;
+        right: 00px;
+    }
+
+    nav .test{
+        padding: 6px !important;
+    }
+}
+
+
+@media (max-width: 602px){
+
+    #home{
+        margin-top: -40px;
+
+    }
+
+    nav #navbarNav{
+        
+        position:relative;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav .loginAndCart{
+        position: absolute;
+        bottom: 10px;
+    }
+
+    nav .loginAndCart{
+        font-size: 21px;
+        position: relative;
+    }
+    
+    nav .product, nav .test{
+        
+       line-height: 40px;
+    }
+
+    
+}
+
+@media (max-width: 548px){
+
+    #home .container-fluid{
+        background-position: unset !important;
+    }
+}
+
+@media (max-width: 377px){
+
+    #article .container-fluid{
+        background-position: unset !important;
+    }
+}
