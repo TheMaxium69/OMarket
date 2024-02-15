@@ -85,7 +85,7 @@
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 670px){
     
     #article form{
         position: relative;
@@ -93,12 +93,24 @@
 
     #article i{
         position: absolute;
-        top: -10px;
+        top: -8px;
+    }
+}
+
+ @media (max-width: 532px){
+    
+    #article form{
+        position: relative;
+    }
+
+    #article i{
+        position: absolute;
+        top: -12px;
         right: 5px;
     }
 }
 
-@media (max-width: 390px){
+@media (max-width: 448px){
     
     #article form{
         position: relative;
@@ -106,7 +118,32 @@
 
     #article i::before{
         position: absolute;
-        top: -2px;
-        left: -10px;
+        right: -15px;
+        top: 5px;
     }
+
+    #article #search-icon {
+        font-size: 120%;
+        font-weight: bolder;
+    }
+}
+
+@media (max-width: 373px){
+
+    #article #search-icon {
+        font-size: 90%;
+        font-weight: bolder;
+    }
+
+    #article form{
+        position: relative;
+    }
+
+    #article i::before{
+        position: absolute;
+        right: -23px;
+        top: 5px;
+    }
+}
+
 }
