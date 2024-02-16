@@ -8,14 +8,16 @@ $productAll = getProductAll();
 
 foreach ($productAll as $product){
 
+    if (!empty($product['active'])){
     if ($product['active'] == 1){
+
 ?>
 
 <div class="article_card displaytrue">
 
     <div class="card" style="width: 18rem;">
 
-        <img src="<?= $env_urlPrestashop . $product['id']  ."-home_default/". $product['link'] . ".jpg" ?>" class="card-img-top" alt="article_name_picture">
+        <img src="<?= $env_urlPrestashop . getProductImage($product['id'])  ."-home_default/". $product['link'] . ".jpg" ?>" class="card-img-top" alt="article_name_picture">
         <div class="card-body">
 
             <h5 class="card-title"><?= $product['name'] ?></h5>
@@ -25,6 +27,6 @@ foreach ($productAll as $product){
     </div>
 </div>
 
-<?php } } ?>
+<?php } } } ?>
 
 </div>

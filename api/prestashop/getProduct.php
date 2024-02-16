@@ -56,3 +56,24 @@ function getProductAll(){
     return $productAll;
 
 }
+
+function getProductImage($idProduct){
+    include "db.php";
+
+    $imageID = "";
+
+    $requeteImage = $db->prepare("SELECT * FROM `ps_image` WHERE `id_product` = :id ");
+    $requeteImage->execute([
+        ":id" => $idProduct
+    ]);
+    $resultImage = $requeteImage->fetchAll();
+
+    foreach ($resultImage as $image){
+        if ($image['cover'] == "1"){
+            $imageID = $image['id_image'];
+        }
+    }
+
+    return $imageID;
+
+}
