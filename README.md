@@ -1,3 +1,3 @@
-# MySiteTemplate
+# OMarket-WebSite
 
-Mon template de site web
+Site Officiel de OMarket
