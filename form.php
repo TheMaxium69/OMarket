@@ -129,7 +129,7 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
 
 <!--    QUESTION     -->
         <div class="row">
-            <prefix><?= $nbQuestion ?><i class="fa-solid fa-arrow-right"></i></prefix>
+            <prefix><?= $nbQuestion ?><i class="fa-solid fa-arrow-right" style="color:#57644a"></i></prefix>
             <h1><?= $env_question[$nbQuestion][$ENV_LANG]["question"] ?> </h1>
         </div>
 
@@ -217,10 +217,11 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
 
 <style>
 
+    :root {
+    /*Vert omarket*/
+    --color-main:#57644a;
 
-
-
-
+    }
 
     #formBody {
         background-color: #f6f2e8;
@@ -261,7 +262,7 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
     #formBody prefix i{
         margin-left: 5px;
         font-size: 15px;
-        color: red;
+        color: var(--color-main);
     }
 
     #formBody input.champ{
@@ -314,7 +315,7 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
 
     #formBody .form-check-input:checked {
 
-        accent-color: #ff0024 !important;
+        accent-color: var(--color-main); 
     }
 
     #formBody .footer-form{
@@ -328,13 +329,13 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
 
     #formBody .footer-form button{
         margin: auto 88px;
-        background-color: red;
-        border-color: red;
+        background-color: var(--color-main);
+        border-color: var(--color-main);
         border-radius: 10px;
     }
 
     #formBody .footer-form button.desactive{
-        background-color: #ff000026!important;
+        background-color: var(--color-main); 
         border-color: rgba(255, 0, 0, 0) !important;
     }
 
