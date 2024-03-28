@@ -21,6 +21,7 @@
  *
  */
 
+require "api/mail/postQuestion.php";
 $totalQuestion = count($env_question);
 
 if (!empty($_GET['q'])){
@@ -98,10 +99,16 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
         $_SESSION["reponseFormulaireFinal"] = $_SESSION["reponseFormulaire"];
         $_SESSION["reponseFormulaireFinal"]['finalCount'] = $nbFinalTemp+1;
 
+        addQuestion($_SESSION["reponseFormulaireFinal"]);
+
     } else {
 
         $_SESSION["reponseFormulaireFinal"] = $_SESSION["reponseFormulaire"];
         $_SESSION["reponseFormulaireFinal"]['finalCount'] = 1;
+
+        addQuestion($_SESSION["reponseFormulaireFinal"]);
+
+
     }
     $_SESSION["reponseFormulaire"] = [];
 
@@ -111,8 +118,6 @@ if ($nbQuestion !== "1" && $nbQuestion <= $totalQuestion) {
 
 }
 
-//var_dump($_SESSION["reponseFormulaire"]);
-//var_dump($_SESSION["reponseFormulaireFinal"]);
 ?>
 
 <?php if (empty($_POST['goQuestion']) || $_POST['goQuestion'] <= $totalQuestion){ ?>

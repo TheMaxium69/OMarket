@@ -30,8 +30,30 @@ $env_page = [
 $env_question = [
 
 
-    // Premier question
+    // Mail
     1 => [
+
+        "fr" => [
+            "question" => "Tout d'abord, quel est votre email ?",
+            "sub_question" => "En cochant cette case, j'accepte que les données personnelles fournies à Ø Market soient traitées pour créer ma liste de courses personnalisée.",
+            "champ" => "Entrez votre mail",
+            "reponse" => "",
+        ],
+
+        "en" => [
+            "question" => "",
+            "sub_question" => "",
+            "select" => [
+                "Yes",
+                "No"
+            ],
+            "reponse" => "",
+        ],
+
+        "type" => "champ",
+    ],
+
+    2 => [
 
         "fr" => [
             "question" => "Tout d'abord, quel est votre nom ?",
@@ -58,7 +80,7 @@ $env_question = [
 
 
     // Deuxieme question
-    2 => [
+    3 => [
         "fr" => [
             "question" => "Quel est votre régime alimentaire préféré ?",
             "select" => [
@@ -85,7 +107,7 @@ $env_question = [
     ],
 
     // troisieme question
-    3 => [
+    4 => [
         "fr" => [
             "question" => "Quel âge avez-vous ?",
             "champ" => "Entrez votre âge",
